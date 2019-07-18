@@ -1,0 +1,12 @@
+version: '3.4'
+services:
+  notebook:
+    image: wayfair-hackathon/machine-learning
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+    - 8888:8888
+    volumes:
+    - ./wayfair_hackathon_demo.ipynb:/home/jovyan/wayfair_hackathon_demo.ipynb
+    - ~/Downloads/breast-cancer-wisconsin.data:/home/jovyan/Downloads/breast-cancer-wisconsin.data
